@@ -143,12 +143,16 @@ Developers/employers visiting this portfolio should see:
 ## **Visual Direction / Inspiration**
 
 - **Style**: Clean, modern, minimal
-- **Colors**: Pick 2-3 colors with good contrast for accessibility
+- **Colors**:
+  --color-brand-navy: var(--color-slate-900);
+  --color-brand-orange: var(--color-orange-500);
+  --color-brand-cyan: var(--color-cyan-500);
+  --color-brand-light: var(--color-slate-50);
+  --color-brand-dark: var(--color-slate-800);
+  --color-brand-border: var(--color-slate-200);
 - **Typography**: Modern sans-serif, readable font sizes (min 16px for body)
 - **Interactions**: Smooth hover/focus states, subtle animations (fade-ins, scale)
 - **Accessibility**: High contrast mode support, focus indicators, no color-only information
-
-_Suggestion: Spend 30 min sketching a quick wireframe of Home → Browse → Detail → Favorites flow_
 
 ---
 
