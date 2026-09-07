@@ -1,15 +1,23 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 import { Calendar, Pin, People, Heart } from "@/public/images";
 import { getFormattedDate } from "@/lib/helpers";
 import type { Event } from "@/types";
 
 export const EventCard = ({ event }: { event: Event }) => {
   const router = useRouter();
+  const eventUrl = new URL(
+    `/events/${event.id}`,
+    window.location.origin,
+  ).toString();
+  const [showEventLink, setShowEventLink] = useState(false);
   const showEventDetails = () => {
     router.push(`/events/${event.id}`);
+  };
+  const toggleEventLink = () => {
+    setShowEventLink(!showEventLink);
   };
   return (
     <article className="group flex h-full flex-col">
@@ -67,10 +75,19 @@ export const EventCard = ({ event }: { event: Event }) => {
           <button
             type="button"
             className="rounded-lg btn-secondary px-4 py-2 text-sm font-semibold fv-brand"
+            onClick={toggleEventLink}
           >
-            Share
+            {showEventLink ? "Hide Link" : "Share"}
           </button>
         </div>
+        {showEventLink && (
+          <p
+            role="status"
+            className="max-w-56 text-xs text-brand-cyan self-center"
+          >
+            {eventUrl}
+          </p>
+        )}
       </div>
     </article>
   );
