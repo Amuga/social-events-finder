@@ -8,15 +8,16 @@ import type { Event } from "@/types";
 
 export const EventCard = ({ event }: { event: Event }) => {
   const router = useRouter();
-  const eventUrl = new URL(
-    `/events/${event.id}`,
-    window.location.origin,
-  ).toString();
   const [showEventLink, setShowEventLink] = useState(false);
+  const [eventUrl, setEventUrl] = useState("");
   const showEventDetails = () => {
     router.push(`/events/${event.id}`);
   };
   const toggleEventLink = () => {
+    setEventUrl(
+      new URL(`/events/${event.id}`, window.location.origin).toString(),
+    );
+
     setShowEventLink(!showEventLink);
   };
   return (
