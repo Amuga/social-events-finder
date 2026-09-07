@@ -7,17 +7,17 @@
       "date": "2024-09-15T20:00",
       "location": "Downtown, City Center",
       "description": "Live indie bands perform. Free entry, drinks available.",
-      "image": "/images/indie-night.jpg",
+      "image": "/images/1.jpg",
       "attendees": 120
     },
     {
       "id": 2,
-      "title": "Tech Meetup: React & Next.js",
-      "category": "Meetups",
+      "title": "Composting & Recycling 101",
+      "category": "Educational",
       "date": "2024-09-18T18:30",
-      "location": "Innovation Hub, TechPark",
-      "description": "Join local developers discussing React best practices and Next.js performance tips.",
-      "image": "/images/tech-meetup.jpg",
+      "location": "Town Hall, City Center",
+      "description": "Join local experts to learn about the benefits of composting and what can be achieved.",
+      "image": "/images/2.jpg",
       "attendees": 45
     },
     {
@@ -27,7 +27,7 @@
       "date": "2024-09-21T22:00",
       "location": "Rooftop Lounge, Uptown",
       "description": "Outdoor rooftop party with DJs, cocktails, and city views. Age 21+.",
-      "image": "/images/rooftop-party.jpg",
+      "image": "/images/3.jpg",
       "attendees": 250
     },
     {
@@ -37,17 +37,17 @@
       "date": "2024-09-22T11:00",
       "location": "Central Park",
       "description": "Experience diverse cuisines, cooking demos, and live performances.",
-      "image": "/images/food-festival.jpg",
+      "image": "/images/4.jpg",
       "attendees": 1500
     },
     {
       "id": 5,
-      "title": "Networking Mixer for Young Professionals",
+      "title": "Expats & Locals Mixer",
       "category": "Networking",
       "date": "2024-09-25T17:00",
-      "location": "Business Tower, Conference Room A",
-      "description": "Connect with fellow professionals, exchange ideas, and build lasting relationships.",
-      "image": "/images/networking.jpg",
+      "location": "City Hall, Conference Room A",
+      "description": "Connect with expats and locals, learn and share tips, discuss culture and build lasting relationships.",
+      "image": "/images/5.jpg",
       "attendees": 80
     },
     {
@@ -57,17 +57,17 @@
       "date": "2024-09-23T09:00",
       "location": "Riverside Sports Complex",
       "description": "Join us for a fun day of competitive volleyball. All skill levels welcome!",
-      "image": "/images/volleyball.jpg",
+      "image": "/images/6.jpg",
       "attendees": 60
     },
     {
       "id": 7,
-      "title": "Web Design Workshop",
+      "title": "WoodWork(Chop)",
       "category": "Workshops",
       "date": "2024-09-20T14:00",
       "location": "Creative Studio, Art District",
-      "description": "Learn modern web design principles and tools from industry experts.",
-      "image": "/images/workshop.jpg",
+      "description": "Learn both modern and classic woodwork principles and tools from industry experts.",
+      "image": "/images/7.jpg",
       "attendees": 35
     },
     {
@@ -77,7 +77,7 @@
       "date": "2024-09-19T21:00",
       "location": "Blue Note Jazz Club",
       "description": "Smooth jazz performances by local ensembles. Reservation recommended.",
-      "image": "/images/jazz-lounge.jpg",
+      "image": "/images/8.jpg",
       "attendees": 90
     },
     {
@@ -87,7 +87,7 @@
       "date": "2024-09-17T19:00",
       "location": "Gallery District, Studio 42",
       "description": "Discuss contemporary art, gallery walks, and cultural events.",
-      "image": "/images/art-meetup.jpg",
+      "image": "/images/9.jpg",
       "attendees": 30
     },
     {
@@ -97,7 +97,7 @@
       "date": "2024-09-21T18:00",
       "location": "Main Street Plaza",
       "description": "Outdoor market featuring local vendors, crafts, and live music.",
-      "image": "/images/night-market.jpg",
+      "image": "/images/10.jpg",
       "attendees": 800
     },
     {
@@ -107,7 +107,7 @@
       "date": "2024-09-24T10:00",
       "location": "Sunset Beach",
       "description": "Help clean the beach and enjoy a community BBQ. Bring friends!",
-      "image": "/images/beach-cleanup.jpg",
+      "image": "/images/11.jpg",
       "attendees": 120
     },
     {
@@ -117,7 +117,7 @@
       "date": "2024-09-26T15:00",
       "location": "Photography Studio, Downtown",
       "description": "Learn camera fundamentals, composition, and lighting techniques.",
-      "image": "/images/photography.jpg",
+      "image": "/images/12.jpg",
       "attendees": 25
     },
     {
@@ -127,17 +127,17 @@
       "date": "2024-09-28T20:00",
       "location": "Warehouse District, Event Hall",
       "description": "Multi-stage electronic music festival featuring international DJs.",
-      "image": "/images/electronic-fest.jpg",
+      "image": "/images/13.jpg",
       "attendees": 2000
     },
     {
       "id": 14,
-      "title": "Startup Pitch Night",
-      "category": "Networking",
+      "title": "Nature Walk at night",
+      "category": "Survival",
       "date": "2024-09-27T18:30",
-      "location": "Venture Hub, Conference Center",
-      "description": "Watch entrepreneurs pitch ideas to investors. Open to the public.",
-      "image": "/images/pitch-night.jpg",
+      "location": "Lion's Den, Lion Infested Forest",
+      "description": "Don't get eaten by a lion. Open to the public.",
+      "image": "/images/14.jpg",
       "attendees": 150
     },
     {
@@ -147,7 +147,7 @@
       "date": "2024-09-25T08:00",
       "location": "Mountain Peak Trail Head",
       "description": "Guided hiking tour with scenic views. Difficulty: moderate.",
-      "image": "/images/hiking.jpg",
+      "image": "/images/15.jpg",
       "attendees": 40
     }
   ]

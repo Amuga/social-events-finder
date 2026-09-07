@@ -1,9 +1,16 @@
+"use client";
 import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { Calendar, Pin, People, Heart } from "@/public/images";
 import { getFormattedDate } from "@/lib/helpers";
 import type { Event } from "@/types";
 
 export const EventCard = ({ event }: { event: Event }) => {
+  const router = useRouter();
+  const showEventDetails = () => {
+    router.push(`/events/${event.id}`);
+  };
   return (
     <article className="group flex h-full flex-col">
       <div className="relative h-44 w-full overflow-hidden bg-brand-border">
@@ -13,6 +20,7 @@ export const EventCard = ({ event }: { event: Event }) => {
           fill
           sizes="(max-width: 640px) 100vw, 384px"
           className="object-cover transition-transform duration-300 group-hover:scale-105"
+          onClick={showEventDetails}
         />
         <span className="absolute left-3 top-3 rounded-full bg-brand-light/95 px-3 py-1 text-xs font-semibold text-brand-cyan shadow-sm backdrop-blur">
           {event.category}
@@ -51,13 +59,14 @@ export const EventCard = ({ event }: { event: Event }) => {
         <div className="flex flex-row flex-1 items-end justify-between">
           <button
             type="button"
-            className="rounded-lg btn-primary px-4 py-2 text-sm font-semibold transition-colors"
+            onClick={showEventDetails}
+            className="rounded-lg btn-primary px-4 py-2 text-sm font-semibold fv-brand"
           >
-            RSVP
+            View Details
           </button>
           <button
             type="button"
-            className="rounded-lg btn-secondary px-4 py-2 text-sm font-semibold  fv-brand"
+            className="rounded-lg btn-secondary px-4 py-2 text-sm font-semibold fv-brand"
           >
             Share
           </button>
