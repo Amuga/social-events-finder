@@ -28,7 +28,7 @@ export const EventCard = ({ event }: { event: Event }) => {
           alt={event.title}
           fill
           sizes="(max-width: 640px) 100vw, 384px"
-          className="object-cover transition-transform duration-300 group-hover:scale-105"
+          className="object-cover transition-transform duration-300 group-hover:scale-105 hover:cursor-pointer"
           onClick={showEventDetails}
         />
         <span className="absolute left-3 top-3 rounded-full bg-brand-light/95 px-3 py-1 text-xs font-semibold text-brand-cyan shadow-sm backdrop-blur">

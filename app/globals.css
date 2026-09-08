@@ -25,11 +25,11 @@ body {
 @layer components {
   .btn-primary {
     @apply text-brand-light hover:text-slate-100 bg-brand-orange hover:bg-orange-600 transition 
-    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-orange focus-visible:ring-offset-2;
+    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-orange focus-visible:ring-offset-2 disabled:cursor-wait disabled:opacity-60;
   }
   .btn-secondary {
     @apply text-brand-light hover:text-slate-100 bg-brand-cyan hover:bg-cyan-600 transition 
-    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-2;
+    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-2 disabled:cursor-wait disabled:opacity-60;
 
   }
   .fv-brand {
