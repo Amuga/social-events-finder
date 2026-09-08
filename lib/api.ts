@@ -33,7 +33,6 @@ export async function getEvents(
     params.set("category", category);
   }
   const res = await fetch(`${API_URL}/events?${params.toString()}`);
-  console.log("url -> ", `${API_URL}/events?${params.toString()}`);
 
   if (!res.ok) {
     throw new Error(`Fetch failed: ${res.statusText}`);
@@ -56,4 +55,16 @@ export async function getEvent(id: number): Promise<Event> {
   }
 
   return res.json();
+}
+
+export async function getCategories(): Promise<string[]> {
+  const res = await fetch(`${API_URL}/events`);
+
+  if (!res.ok) {
+    throw new Error(`Fetch failed: ${res.statusText}`);
+  }
+
+  const events = (await res.json()) as Event[];
+
+  return [...new Set(events.map((event) => event.category))].sort();
 }
