@@ -25,7 +25,7 @@ export default async function Home({ searchParams }: HomeProps) {
   ]);
 
   return (
-    <main className="flex flex-1 flex-col font-sans w-full max-w-7xl mx-auto items-center py-6 p-4 sm:items-start gap-4 ">
+    <main className="flex flex-1 flex-col font-sans w-full max-w-7xl mx-auto py-6 p-4 gap-4 ">
       <h1 className="text-3xl">My cool page</h1>
       <h2 className="text-brand-navy bo text-lg">Events near you</h2>
 

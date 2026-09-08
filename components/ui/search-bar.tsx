@@ -59,7 +59,7 @@ export const SearchBar = ({ categories }: SearchProps) => {
     });
   };
   return (
-    <search className="w-full">
+    <search>
       <form
         onSubmit={(event) => event.preventDefault()}
         className="flex flex-col gap-4 rounded-lg border border-brand-border bg-white p-5 sm:flex-row sm:items-center"
