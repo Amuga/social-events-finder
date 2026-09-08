@@ -3,7 +3,6 @@ import { SearchBar } from "@/components/ui/search-bar";
 
 import { getCategories, PER_PAGE } from "@/lib/api";
 import { getEvents } from "@/lib/api";
-import { Suspense } from "react";
 
 type HomeProps = {
   searchParams: Promise<{
