@@ -47,7 +47,7 @@ export async function getEvents(
   };
 }
 
-export async function getEvent(id: number): Promise<Event> {
+export async function getEvent(id: string): Promise<Event> {
   const res = await fetch(`${API_URL}/events/${id}`);
 
   if (!res.ok) {
@@ -67,4 +67,49 @@ export async function getCategories(): Promise<string[]> {
   const events = (await res.json()) as Event[];
 
   return [...new Set(events.map((event) => event.category))].sort();
+}
+
+export async function createEvent(event: Omit<Event, "id">): Promise<Event> {
+  const res = await fetch(`${API_URL}/events`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(event),
+  });
+
+  if (!res.ok) {
+    throw new Error(`Create failed: ${res.statusText}`);
+  }
+
+  return res.json();
+}
+
+export async function updateEvent(
+  id: string,
+  event: Partial<Omit<Event, "id">>,
+): Promise<Event> {
+  const res = await fetch(`${API_URL}/events/${id}`, {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(event),
+  });
+
+  if (!res.ok) {
+    throw new Error(`Update failed: ${res.statusText}`);
+  }
+
+  return res.json();
+}
+
+export async function deleteEvent(id: string): Promise<void> {
+  const res = await fetch(`${API_URL}/events/${id}`, {
+    method: "DELETE",
+  });
+
+  if (!res.ok) {
+    throw new Error(`Delete failed: ${res.statusText}`);
+  }
 }

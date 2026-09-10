@@ -23,13 +23,17 @@ body {
 }
 
 @layer components {
+  .btn {
+    @apply text-brand-light hover:text-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-wait disabled:opacity-60 cursor-pointer;
+  }
+
   .btn-primary {
-    @apply text-brand-light hover:text-slate-100 bg-brand-orange hover:bg-orange-600 transition 
-    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-orange focus-visible:ring-offset-2 disabled:cursor-wait disabled:opacity-60;
+    @apply  bg-brand-orange hover:bg-orange-600 transition 
+    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-orange focus-visible:ring-offset-2;
   }
   .btn-secondary {
-    @apply text-brand-light hover:text-slate-100 bg-brand-cyan hover:bg-cyan-600 transition 
-    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-2 disabled:cursor-wait disabled:opacity-60;
+    @apply  bg-brand-cyan hover:bg-cyan-600 transition 
+    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-2;
 
   }
   .fv-brand {

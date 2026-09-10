@@ -8,3 +8,11 @@ export const getFormattedDate = (date: Date) => {
     minute: "2-digit",
   })}`;
 };
+
+export const normalizeImagePath = (path: string) => {
+  if (!path) {
+    return path;
+  }
+
+  return path.startsWith("/") ? path : `/${path}`;
+};

@@ -8,7 +8,7 @@ export default async function EventModal({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
-  const event = await getEvent(Number(id));
+  const event = await getEvent(id);
 
   return (
     <Modal isOpen={true} title="Event Details">

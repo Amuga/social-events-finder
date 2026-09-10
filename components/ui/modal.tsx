@@ -87,15 +87,17 @@ export function Modal({
 
         <footer className="flex gap-3 mt-6 justify-end">
           <button
+            type="button"
             onClick={handleClose}
-            className="px-4 py-2 rounded btn-secondary fv-brand font-semibold text-sm"
+            className="px-4 py-2 rounded btn btn-secondary fv-brand font-semibold text-sm"
           >
             {onClose ? "Cancel" : "Close"}
           </button>
           {onConfirm && (
             <button
               onClick={onConfirm}
-              className="px-4 py-2 rounded btn-primary fv-brand font-semibold text-sm disabled:bg-gray-400"
+              type="button"
+              className="px-4 py-2 rounded btn btn-primary fv-brand font-semibold text-sm disabled:bg-gray-400"
               disabled={isPending}
             >
               {isPending ? pendingText : "Confirm"}

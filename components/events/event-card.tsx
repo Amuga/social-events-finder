@@ -10,9 +10,11 @@ export const EventCard = ({ event }: { event: Event }) => {
   const router = useRouter();
   const [showEventLink, setShowEventLink] = useState(false);
   const [eventUrl, setEventUrl] = useState("");
+
   const showEventDetails = () => {
     router.push(`/events/${event.id}`);
   };
+
   const toggleEventLink = () => {
     setEventUrl(
       new URL(`/events/${event.id}`, window.location.origin).toString(),
@@ -20,6 +22,7 @@ export const EventCard = ({ event }: { event: Event }) => {
 
     setShowEventLink(!showEventLink);
   };
+
   return (
     <article className="group flex h-full flex-col">
       <div className="relative h-44 w-full overflow-hidden bg-brand-border">
@@ -69,13 +72,13 @@ export const EventCard = ({ event }: { event: Event }) => {
           <button
             type="button"
             onClick={showEventDetails}
-            className="rounded-lg btn-primary px-4 py-2 text-sm font-semibold fv-brand"
+            className="rounded-lg btn btn-primary px-4 py-2 text-sm font-semibold fv-brand"
           >
             View Details
           </button>
           <button
             type="button"
-            className="rounded-lg btn-secondary px-4 py-2 text-sm font-semibold fv-brand"
+            className="rounded-lg btn btn-secondary px-4 py-2 text-sm font-semibold fv-brand"
             onClick={toggleEventLink}
           >
             {showEventLink ? "Hide Link" : "Share"}

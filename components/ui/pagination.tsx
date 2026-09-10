@@ -47,7 +47,7 @@ export const Pagination = ({
             type="button"
             onClick={() => goToPage(currentPage - 1)}
             disabled={isPending}
-            className="rounded-lg btn-secondary px-4 py-2 text-sm font-semibold"
+            className="rounded-lg btn btn-secondary px-4 py-2 text-sm font-semibold"
           >
             {isPending ? "Loading..." : "Next"}
           </button>
@@ -62,7 +62,7 @@ export const Pagination = ({
             type="button"
             onClick={() => goToPage(currentPage + 1)}
             disabled={isPending}
-            className="rounded-lg btn-primary px-4 py-2 text-sm font-semibold"
+            className="rounded-lg btn btn-primary px-4 py-2 text-sm font-semibold"
           >
             {isPending ? "Loading..." : "Next"}
           </button>

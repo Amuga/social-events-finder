@@ -11,7 +11,7 @@ export default function Navigation() {
           Manage and find events of all sorts near you.
         </p>
       </Link>
-      <button className="min-h-10 md:block px-4 btn-primary rounded-xl flex">
+      <button className="min-h-10 md:block px-4 btn btn-primary rounded-xl flex">
         Login
       </button>
     </nav>
