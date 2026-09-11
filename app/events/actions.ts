@@ -1,6 +1,6 @@
 "use server";
 import * as z from "zod";
-
+import { ApiError } from "@/lib/api-error";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { createEvent, updateEvent, deleteEvent } from "@/lib/api";
@@ -39,7 +39,12 @@ export async function createEventAction(
   }
   try {
     await createEvent(result.data);
-  } catch {
+  } catch (error) {
+    if (error instanceof ApiError) {
+      return {
+        error: error.message,
+      };
+    }
     return {
       error: "Unable to create the event.",
     };
@@ -66,7 +71,12 @@ export async function updateEventAction(
 
   try {
     await updateEvent(id, result.data);
-  } catch {
+  } catch (error) {
+    if (error instanceof ApiError) {
+      return {
+        error: error.message,
+      };
+    }
     return {
       error: "Unable to update the event.",
     };
@@ -80,7 +90,12 @@ export async function updateEventAction(
 export async function deleteEventAction(id: string) {
   try {
     await deleteEvent(id);
-  } catch {
+  } catch (error) {
+    if (error instanceof ApiError) {
+      return {
+        error: error.message,
+      };
+    }
     throw new Error("Unable to delete the event.");
   }
   revalidatePath("/");

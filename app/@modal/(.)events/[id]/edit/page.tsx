@@ -2,6 +2,7 @@ import { getEvent } from "@/lib/api";
 import { Modal } from "@/components/ui/modal";
 import { updateEventAction } from "@/app/events/actions";
 import { EventForm } from "@/components/events/event-form";
+import { notFound } from "next/navigation";
 export default async function EditEventModal({
   params,
 }: {
@@ -9,8 +10,12 @@ export default async function EditEventModal({
 }) {
   const { id } = await params;
 
-  const event = await getEvent(id);
-
+  let event;
+  try {
+    event = await getEvent(id);
+  } catch {
+    notFound();
+  }
   const updateAction = updateEventAction.bind(null, id);
 
   return (

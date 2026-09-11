@@ -1,3 +1,4 @@
+import { notFound } from "next/navigation";
 import { getEvent } from "@/lib/api";
 import Link from "next/link";
 import { EventDetail } from "@/components/events/event-detail";
@@ -10,8 +11,13 @@ export default async function EventPage({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
-  const event = await getEvent(id);
 
+  let event;
+  try {
+    event = await getEvent(id);
+  } catch {
+    notFound();
+  }
   return (
     <main className="flex flex-1 flex-col font-sans w-full max-w-7xl mx-auto items-center py-6 p-4 sm:items-start gap-4">
       <EventDetail event={event} />

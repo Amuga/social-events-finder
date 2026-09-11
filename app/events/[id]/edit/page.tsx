@@ -15,7 +15,6 @@ export default async function EditEventPage({ params }: EditEventPageProps) {
   }
 
   let event;
-
   try {
     event = await getEvent(id);
   } catch {
