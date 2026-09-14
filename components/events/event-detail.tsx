@@ -14,6 +14,7 @@ export const EventDetail = ({ event }: { event: Event }) => {
             src={event.image}
             alt={event.title}
             fill
+            loading="eager"
             sizes="(max-width: 640px) 100vw, 320px"
             className="object-cover"
           />

@@ -30,6 +30,7 @@ export const EventCard = ({ event }: { event: Event }) => {
           src={event.image}
           alt={event.title}
           fill
+          loading="eager"
           sizes="(max-width: 640px) 100vw, 384px"
           className="object-cover transition-transform duration-300 group-hover:scale-105 hover:cursor-pointer"
           onClick={showEventDetails}
