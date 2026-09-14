@@ -24,9 +24,11 @@ export default async function Home({ searchParams }: HomeProps) {
   ]);
 
   return (
-    <main className="flex flex-1 flex-col font-sans w-full max-w-7xl mx-auto py-6 p-4 gap-4 ">
-      <h1 className="text-3xl">My cool page</h1>
-      <h2 className="text-brand-navy bo text-lg">Events near you</h2>
+    <main className="flex flex-1 flex-col font-sans w-full max-w-7xl mx-auto py-6 p-4 gap-4">
+      <h1 className="text-brand-navy text-3xl">Local Events</h1>
+      <h2 className="text-xl">
+        Browse through the events near you and expand your social circles
+      </h2>
 
       <SearchBar categories={categories} />
       <EventList
