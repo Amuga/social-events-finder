@@ -1,4 +1,5 @@
 import Link from "next/link";
+import NavButton from "@/components/layout/nav-button";
 
 export default function Navigation() {
   return (
@@ -11,12 +12,12 @@ export default function Navigation() {
           Manage and find events of all sorts near you.
         </p>
       </Link>
-      <Link
-        href={"/events/new"}
-        className="min-h-10 md:block px-4 btn btn-primary rounded-xl flex content-center"
+      <NavButton
+        href="/events/new"
+        className="btn btn-primary min-h-10 rounded-xl px-4"
       >
         Create event
-      </Link>
+      </NavButton>
     </nav>
   );
 }
