@@ -20,7 +20,6 @@ export default async function EditEventModal({
 
   return (
     <Modal isOpen>
-      <h1 className="mb-6 text-2xl font-bold">Edit event</h1>
       {event ? (
         <EventForm event={event} action={updateAction} />
       ) : (
