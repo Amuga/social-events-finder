@@ -48,9 +48,10 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 - [x] Visual interface for finding events
 - [x] Functional pagination for event list
-- [x] API calls to mock server (`json-server`) (CRUD)
+- [x] API calls to mock server (`json-server`) Event related CRUD.
 - [x] Error handling / loading states
-- [x] Responsive UI
+- [x] Form validation.
+- [x] Responsive UI.
 
 ### Outscoped
 
