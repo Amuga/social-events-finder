@@ -11,9 +11,12 @@ export default function Navigation() {
           Manage and find events of all sorts near you.
         </p>
       </Link>
-      <button className="min-h-10 md:block px-4 btn btn-primary rounded-xl flex">
-        Login
-      </button>
+      <Link
+        href={"/events/new"}
+        className="min-h-10 md:block px-4 btn btn-primary rounded-xl flex content-center"
+      >
+        Create event
+      </Link>
     </nav>
   );
 }
