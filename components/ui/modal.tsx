@@ -37,6 +37,9 @@ export function Modal({
   }, []);
 
   useEffect(() => {
+    if (!mounted || !isOpen) {
+      return;
+    }
     const dialog = dialogRef.current;
     if (!dialog) {
       return;
@@ -52,7 +55,7 @@ export function Modal({
     } else if (dialog.open) {
       dialog.close();
     }
-  }, [isOpen]);
+  }, [mounted, isOpen]);
 
   const handleClose = () => {
     previousActiveElement.current?.focus();
@@ -67,7 +70,9 @@ export function Modal({
     }
   };
 
-  if (!mounted || !isOpen) return null;
+  if (!mounted || !isOpen) {
+    return null;
+  }
 
   /*createPortal is a React function that renders a component outside its normal DOM hierarchy.
    Instead of rendering as a child of the current component it renders into a different DOM node— e.g. document.body.

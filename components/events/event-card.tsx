@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { useTransition } from "react";
 import { useState } from "react";
 import { Calendar, Pin, People, Heart } from "@/public/images";
 import { getFormattedDate } from "@/lib/helpers";
@@ -9,10 +10,13 @@ import type { Event } from "@/types";
 export const EventCard = ({ event }: { event: Event }) => {
   const router = useRouter();
   const [showEventLink, setShowEventLink] = useState(false);
+  const [isPending, startTransition] = useTransition();
   const [eventUrl, setEventUrl] = useState("");
 
   const showEventDetails = () => {
-    router.push(`/events/${event.id}`);
+    startTransition(() => {
+      router.push(`/events/${event.id}`);
+    });
   };
 
   const toggleEventLink = () => {
@@ -73,9 +77,11 @@ export const EventCard = ({ event }: { event: Event }) => {
           <button
             type="button"
             onClick={showEventDetails}
+            disabled={isPending}
+            aria-busy={isPending}
             className="rounded-lg btn btn-primary px-4 py-2 text-sm font-semibold fv-brand"
           >
-            View Details
+            {isPending ? "Loading..." : "View Details"}
           </button>
           <button
             type="button"
