@@ -91,11 +91,6 @@ export async function deleteEventAction(id: string) {
   try {
     await deleteEvent(id);
   } catch (error) {
-    if (error instanceof ApiError) {
-      return {
-        error: error.message,
-      };
-    }
     throw new Error("Unable to delete the event.");
   }
   revalidatePath("/");

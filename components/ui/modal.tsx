@@ -1,14 +1,13 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useEffect, useRef, ReactNode } from "react";
+import { useEffect, useRef, useState, ReactNode } from "react";
 import { createPortal } from "react-dom";
 
 type BaseModalProps = {
   isOpen: boolean;
   onConfirm?: () => void;
   onClose?: () => void;
-  routerClose?: boolean;
   title?: string;
   children: ReactNode;
 };
@@ -21,7 +20,6 @@ export function Modal({
   isOpen,
   onConfirm,
   onClose,
-  routerClose,
   title,
   children,
   ...rest
@@ -29,9 +27,14 @@ export function Modal({
   const isPending = "isPending" in rest ? rest.isPending : false;
   const pendingText = "pendingText" in rest ? rest.pendingText : "";
   const router = useRouter();
+  const [mounted, setMounted] = useState(false);
 
   const dialogRef = useRef<HTMLDialogElement>(null);
   const previousActiveElement = useRef<HTMLElement | null>(null);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     const dialog = dialogRef.current;
@@ -64,7 +67,7 @@ export function Modal({
     }
   };
 
-  if (!isOpen) return null;
+  if (!mounted || !isOpen) return null;
 
   /*createPortal is a React function that renders a component outside its normal DOM hierarchy.
    Instead of rendering as a child of the current component it renders into a different DOM node— e.g. document.body.
