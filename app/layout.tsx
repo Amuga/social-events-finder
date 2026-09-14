@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Social lovers on premises",
+  title: "Social life in person",
   description: "Made for connections",
 };
 

@@ -5,7 +5,7 @@ export default function Navigation() {
     <nav className="py-4 px-8 bg-brand-light border-be border-brand-border items-center flex flex-row full-w justify-between font-sans">
       <Link href={"/"}>
         <p className="text-xl font-bold text-brand-navy">
-          Social lovers on premises
+          Social life in person
         </p>
         <p className="hidden md:block text-slate-600">
           Manage and find events of all sorts near you.
