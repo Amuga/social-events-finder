@@ -52,7 +52,6 @@ export async function createEventAction(
   }
   revalidatePath("/");
   revalidatePath(`/events/${event.id}`);
-
   redirect(`/events/${event.id}`);
 }
 
