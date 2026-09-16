@@ -132,7 +132,7 @@ export function EventForm({ event, action }: EventFormProps) {
               id="image"
               name="image"
               type="string"
-              placeholder="/images/example.jpg"
+              placeholder="/images/demo.jpg"
               defaultValue={event?.image}
               className={inputClassName}
             />

@@ -37,8 +37,9 @@ export async function createEventAction(
       fieldErrors: flattened.fieldErrors,
     };
   }
+  let event;
   try {
-    await createEvent(result.data);
+    event = await createEvent(result.data);
   } catch (error) {
     if (error instanceof ApiError) {
       return {
@@ -50,7 +51,9 @@ export async function createEventAction(
     };
   }
   revalidatePath("/");
-  redirect("/");
+  revalidatePath(`/events/${event.id}`);
+
+  redirect(`/events/${event.id}`);
 }
 
 export async function updateEventAction(
