@@ -47,8 +47,15 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 ### Completed
 
 - [x] Visual interface for finding events
+      ![UI Feature](/public/images/read-me/ft1.png)
+- [x] Modal and route navigation support
+      ![Modal Feature](/public/images/read-me/ft2a.png) ![Route Navigation Feature](/public/images/read-me/ft2b.png)
+- [x] Category filter and search functionality
+      ![Search and filter Feature](/public/images/read-me/ft5.png)
 - [x] Functional pagination for event list
+      ![Pagination Feature](/public/images/read-me/ft3.png)
 - [x] API calls to mock server (`json-server`) Event related CRUD.
+      ![API/Form Picture](/public/images/read-me/ft4.png)
 - [x] Error handling / loading states
 - [x] Form validation.
 - [x] Responsive UI.
@@ -67,6 +74,7 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
   - `@modal/` - Next.js intercept routes for modal views for the supported page routes listed above.
 - `components/` components for different pages and routes
 - `public/` - static assets
+- `lib/` - helpers/schemas and API functionality.
 - `data/`
   - `events.json` - mock database for json-server
 - `types.ts` typescript type files with shared interfaces and types.

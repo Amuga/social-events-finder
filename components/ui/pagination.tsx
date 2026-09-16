@@ -49,7 +49,7 @@ export const Pagination = ({
             disabled={isPending}
             className="rounded-lg btn btn-secondary px-4 py-2 text-sm font-semibold"
           >
-            {isPending ? "Loading..." : "Next"}
+            {isPending ? "Loading..." : "Previous"}
           </button>
         )}
 
